@@ -10,7 +10,7 @@ The only thing the module does at the server side (at Zabbix server), is install
 
 ### Server Side Requirements
 
-The module requires 'zabbix' class at the server side. See [puppet/zabbix module](https://forge.puppet.com/puppet/zabbix) at puppet forge).
+The module requires 'zabbix' class at the server side. See [puppet/zabbix module](https://forge.puppet.com/puppet/zabbix) at puppet forge.
 
 ### elastizabbix Server Side Example
 
@@ -38,7 +38,7 @@ class { 'elastizabbix': }
 
 ## License
 
-This module is published under Apache 2.0 license, but the original (elastizabbix code)[https://github.com/mkhpalm/elastizabbix] is published under MIT License. Anyway you are pretty much free to use both in a way you want.
+This module is published under Apache 2.0 license, but the original [elastizabbix project](https://github.com/mkhpalm/elastizabbix) is published under MIT License. Anyway you are pretty much free to use both in a way you want.
 
 ## Release History
 
