@@ -1,0 +1,32 @@
+{
+  "name": "fatdragon-elastizabbix",
+  "version": "0.1.0", 
+  "author": "Fat Dragon", 
+  "license": "Apache-2.0",
+  "summary": "Installs and configures elastizabbix - agent and template for monitoring ElasticSearch cluster in Zabbix.",
+  "source": "https://github.com/peske/puppet-elastizabbix",
+  "project_page": "https://www.itenlight.com/blog/2016/06/09/Puppet%2C+Zabbix+and+ElasticSearch+-+elastizabbix+Module",
+  "issues_url": "https://github.com/peske/puppet-elastizabbix/issues",
+  "tags": ["ElasticSearch", "Zabbix"],
+  "operatingsystem_support": [
+  	{
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "16.04", "14.04", "15.10", "12.04" ]
+    }, 
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [ "6.0", "7.0", "8.0" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "5.0", "6.0", "7.0" ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ "5.0", "6.0", "7.0" ]
+    }],
+    "dependencies": [
+    	{ "name": "puppet/zabbix", "version_requirement": ">= 2.3.2 < 3.0.0" }, 
+      { "name": "puppetlabs/stdlib","version_requirement":">= 4.12.0 < 5.0.0"}
+    ]
+}
