@@ -2,11 +2,7 @@
 import os
 import sys
 import json
-<% if @fd_patch -%>
 import urllib2
-<% else -%>
-import urllib
-<% end -%>
 import time
 
 ttl = 60
@@ -24,11 +20,7 @@ def get_cache(api):
     jtime = os.path.exists(cache) and os.path.getmtime(cache) or 0
     if time.time() - jtime > ttl and not os.path.exists(lock):
         open(lock, 'a').close() 
-<% if @fd_patch -%>
         with open(cache, 'w') as f: f.write(urllib2.urlopen(stats[api]).read())
-<% else -%>
-        urllib.urlretrieve(stats[api], cache)
-<% end -%>
         os.remove(lock)
     ltime = os.path.exists(lock) and os.path.getmtime(lock) or None
     if ltime and time.time() - ltime > 300:

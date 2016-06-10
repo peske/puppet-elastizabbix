@@ -22,17 +22,6 @@
 #   IMPORTANT: No trailing slash!
 #   Default:   '/etc/zabbix/externalscripts'
 #
-# [*fd_patch*]
-#   Whether to use patch described at 
-#   https://github.com/mkhpalm/elastizabbix/issues/2
-#   or not. If set to false, the original, unchanged
-#   script will be installed. If true the script will
-#   be slightly changed.
-#   IMPORTANT: You should not rely on this parameter
-#              in the future versions - very likely
-#              it'll be removed.
-#   Default:   true (recommended)
-#
 # === Example
 #
 #  class { 'elastizabbix': }
@@ -48,8 +37,7 @@
 class elastizabbix (
   $zabbix_user = 'zabbix',
   $elasticsearch_url = 'http://localhost:9200',
-  $zabbix_script_dir = '/etc/zabbix/externalscripts',
-  $fd_patch = true,
+  $zabbix_script_dir = '/etc/zabbix/externalscripts'
 ) {
 
   file { 'zabbix_script_dir':

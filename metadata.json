@@ -1,6 +1,6 @@
 {
   "name": "fatdragon-elastizabbix",
-  "version": "0.1.0", 
+  "version": "0.1.1", 
   "author": "Fat Dragon", 
   "license": "Apache-2.0",
   "summary": "Installs and configures elastizabbix - agent and template for monitoring ElasticSearch cluster in Zabbix.",

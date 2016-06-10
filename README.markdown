@@ -46,6 +46,13 @@ This module is published under Apache 2.0 license, but the original [elastizabbi
 
 ## Release History
 
+### v0.1.1
+
+**Date:** Jun 10. 2016
+
+**Release Info:**
+* `fd_patch` parameter is removed since the original project is changed to include the patch.
+
 ### v0.1.0
 
 **Date:** Jun 9. 2016
