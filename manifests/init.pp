@@ -47,25 +47,25 @@
 #
 class elastizabbix (
   $zabbix_user = 'zabbix',
-  $elasticsearch_url = 'http://localhost:9200', 
-  $zabbix_script_dir = '/etc/zabbix/externalscripts', 
-  $fd_patch = true, 
+  $elasticsearch_url = 'http://localhost:9200',
+  $zabbix_script_dir = '/etc/zabbix/externalscripts',
+  $fd_patch = true,
 ) {
 
   file { 'zabbix_script_dir':
-    ensure => 'directory', 
-    path   => $zabbix_script_dir, 
-    owner  => $zabbix_user, 
-    mode   => '0755', 
+    ensure => 'directory',
+    path   => $zabbix_script_dir,
+    owner  => $zabbix_user,
+    mode   => '0755',
   }
 
-  file { 'elastizabbix_script': 
-    ensure  => 'file', 
-    path    => "${zabbix_script_dir}/elastizabbix", 
-    owner   => $zabbix_user, 
-    mode    => '0754', 
-    content => template('elastizabbix/elastizabbix.erb'), 
-    require => File['zabbix_script_dir'], 
+  file { 'elastizabbix_script':
+    ensure  => 'file',
+    path    => "${zabbix_script_dir}/elastizabbix",
+    owner   => $zabbix_user,
+    mode    => '0754',
+    content => template('elastizabbix/elastizabbix.erb'),
+    require => File['zabbix_script_dir'],
   }
 
   # Zabbix conf:

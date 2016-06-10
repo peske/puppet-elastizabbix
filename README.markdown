@@ -36,6 +36,10 @@ The module requires 'zabbix-agent' class at the client side ([puppet/zabbix modu
 class { 'elastizabbix': }
 ```
 
+## Parameters
+
+Often you'll use both mentioned classes without specifying any parameter (the default values should work). Nevertheless you should check [mentioned page](https://www.itenlight.com/blog/2016/06/09/Puppet%2C+Zabbix+and+ElasticSearch+-+elastizabbix+Module) for list of available parameters with descriptions. 
+
 ## License
 
 This module is published under Apache 2.0 license, but the original [elastizabbix project](https://github.com/mkhpalm/elastizabbix) is published under MIT License. Anyway you are pretty much free to use both in a way you want.

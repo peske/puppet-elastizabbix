@@ -31,16 +31,16 @@
 #
 # Copyright 2016 IT Enlight
 #
-class elastizabbix::server ($install_template = true, 
+class elastizabbix::server ($install_template = true,
   $zabbix_user = 'zabbix') {
-	
+  
   if $install_template {
 
     $templates_dir = $zabbix::params::zabbix_template_dir
     
-    ensure_resource('file', 'templates_dir', { 
-        'ensure' => 'directory', 
-        'path'   => $templates_dir, 
+    ensure_resource('file', 'templates_dir', {
+        'ensure' => 'directory',
+        'path'   => $templates_dir,
         'owner'  => $zabbix_user})
     
     exec { 'check Template App ElasticSearch.xml':
