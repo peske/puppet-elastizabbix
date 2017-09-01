@@ -46,6 +46,13 @@ This module is published under Apache 2.0 license, but the original [elastizabbi
 
 ## Release History
 
+### v0.1.2
+
+**Date:** September 1. 2017
+
+**Release Info:**
+* Code cosmetics (thanks to puppet-lint).
+
 ### v0.1.1
 
 **Date:** Jun 10. 2016

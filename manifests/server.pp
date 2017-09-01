@@ -1,6 +1,6 @@
 # == Class: elastizabbix::server
 #
-#  Installs elastizabbix template on Zabbix server. 
+#  Installs elastizabbix template on Zabbix server.
 #
 # === Requirements
 #
@@ -33,16 +33,16 @@
 #
 class elastizabbix::server ($install_template = true,
   $zabbix_user = 'zabbix') {
-  
+
   if $install_template {
 
     $templates_dir = $zabbix::params::zabbix_template_dir
-    
+
     ensure_resource('file', 'templates_dir', {
         'ensure' => 'directory',
         'path'   => $templates_dir,
         'owner'  => $zabbix_user})
-    
+
     exec { 'check Template App ElasticSearch.xml':
       command => '/bin/true',
       path    => ['/sbin', '/bin', '/usr/sbin', '/usr/bin', '/usr/local/sbin',
@@ -50,13 +50,13 @@ class elastizabbix::server ($install_template = true,
       onlyif  => "test ! -f ${templates_dir}/Template App ElasticSearch.xml",
       require => File['templates_dir'],
     }
-    
+
     zabbix::template { 'Template App ElasticSearch':
       templ_name   => 'Template App ElasticSearch',
       templ_source => 'puppet:///modules/elastizabbix/templates_app_elasticsearch.xml',
       require      => Exec['check Template App ElasticSearch.xml'],
     }
-    
+
   }
 
 }

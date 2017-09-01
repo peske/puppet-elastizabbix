@@ -1,11 +1,11 @@
 {
   "name": "fatdragon-elastizabbix",
-  "version": "0.1.1", 
+  "version": "0.1.2", 
   "author": "Fat Dragon", 
   "license": "Apache-2.0",
   "summary": "Installs and configures elastizabbix - agent and template for monitoring ElasticSearch cluster in Zabbix.",
   "source": "https://github.com/peske/puppet-elastizabbix",
-  "project_page": "https://www.itenlight.com/blog/2016/06/09/Puppet%2C+Zabbix+and+ElasticSearch+-+elastizabbix+Module",
+  "project_page": "https://www.fatdragon.me/blog/2016/06/puppet-zabbix-and-elasticsearch-elastizabbix-module",
   "issues_url": "https://github.com/peske/puppet-elastizabbix/issues",
   "tags": ["ElasticSearch", "Zabbix"],
   "operatingsystem_support": [
